@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Início do projeto Frontend criado com React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi construído com [React App](https://github.com/facebook/create-react-app).
+
+## Configuração Inicial
+
+Antes de executar este projeto, é necessário que seja executado o comando: **$env:PORT=5000** para que seja executado na porta 5000 e assim seja possível a comunicação com o backend.
 
 ## Available Scripts
 

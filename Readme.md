@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Início do projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto está dividido em portas distintas, sendo Backend a área do server e o frontend a área do client, construída com ReactJS.
 
-## Available Scripts
+## Scripts Disponíveis
 
-In the project directory, you can run:
+Cada projeto terá seus scripts particulares em seus diretórios, para mais informações acesse as pastas "backend" ou "frontend".
 
 ### `npm start`
 

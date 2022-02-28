@@ -7,7 +7,9 @@
 .navChats:hover {
     background-color: #F5F5F5;
 }
-
+.navChats.active {
+    background-color: #EBEBEB;
+}
 .lines {
     flex: 1;
     height: 100%;

@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.css";
 
 import Nav from "./Nav";
 import Chat from "./Chat";
 
-export default props =>
-    <React.Fragment>
+function Main() {    
+    const [user, setUser] = useState({
+        id: 1,
+        name: 'Ericson Matheus'
+    })
+
+    return (<React.Fragment>
         < Nav />
-        < Chat />
-    </React.Fragment>
+        < Chat user={user}/>
+    </React.Fragment>)
+}
+
+export default Main; 
+    

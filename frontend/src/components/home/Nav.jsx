@@ -4,8 +4,9 @@ import "./Nav.css";
 
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import NavChats from "./NavChats";
+import NewChat from "./NewChat";
 
-function Nav(props) {
+function Nav(user) {
 
     const [chatlist, setChatList] = useState([
         {chatId: 1, title:'Ericson'},
@@ -16,12 +17,23 @@ function Nav(props) {
     ]);
 
     const [activeChat, setActiveChat] = useState({});
+    
+    const [showNewChat, setShowNewChat] = useState(false)
+
+    const handleNewChat = () => {
+        setShowNewChat(true)
+    }
 
     return (
         <div className="sidebar">
+            < NewChat 
+                chatlist={chatlist}
+                user={user}
+                show={showNewChat}
+                setShow={setShowNewChat}/>
             <header>
                 <span className="header--username">Usuário</span>
-                <div className="header--button">
+                <div onClick={handleNewChat} className="header--button">
                     < AddCircleIcon style={{color: '#919191'}}/>
                 </div>   
             </header>

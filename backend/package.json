@@ -4,12 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ericson",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
     "socket.io": "^4.4.1",
-    "nodemon": "2.0.15"
+    "consign": "0.1.6",
+    "cors": "2.8.4",
+    "jwt-simple": "0.5.1",
+    "knex": "0.15.2",
+    "moment": "2.22.2",
+    "passport": "0.4.0",
+    "passport-jwt": "4.0.0",
+    "pg": "^8.0.3",
+    "pm2": "3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

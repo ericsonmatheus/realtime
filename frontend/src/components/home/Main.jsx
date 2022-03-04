@@ -11,7 +11,7 @@ function Main() {
     })
 
     return (<React.Fragment>
-        < Nav />
+        < Nav user={user}/>
         < Chat user={user}/>
     </React.Fragment>)
 }

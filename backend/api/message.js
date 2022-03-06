@@ -4,7 +4,6 @@ module.exports = app => {
 
     const save = (req, res) => {
         const message = { ...req.body }
-        if (req.params.id) message.id = req.params.id
 
         try {
             existsOrErros(message.body, "Digite alguma mensagem")
@@ -16,17 +15,17 @@ module.exports = app => {
 
         app.db('messages')
             .insert(message)
-            .where({ id: message.id })
             .then(_=> res.send())
             .catch( err => res.status(500).send(err))
     }
 
-    const get = (req, res) => {
+    const getByChat = (req, res) => {
         app.db('messages')
-            .select('id', 'body', 'dateHour', 'iduser', 'idchat')
+            .select('id', 'body', 'name', 'dateHour', 'iduser', 'idchat')
+            .where({ idchat: req.params.idchat})
             .then(message => res.json(message))
             .catch(err => res.status(500).send(err))
     }
 
-    return { save, get }
+    return { save, getByChat }
 }

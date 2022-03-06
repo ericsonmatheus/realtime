@@ -1,4 +1,3 @@
-
 exports.up = function (knex, Promise) {
     //Lista de usuários cadastrados em cada chat
     return knex.schema.createTable('userschats', table => {

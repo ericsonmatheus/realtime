@@ -26,5 +26,21 @@ module.exports = app => {
             .catch(err => res.status(500).send(err) )
     }
 
-    return { save, get }
+    const getByUser = (req, res) => {
+        app.db('userschats')
+            .select('iduser', 'idchat')
+            .where({iduser: req.params.iduser})
+            .then(userchat => res.json(userchat))
+            .catch(err => res.status(500).send(err) )
+    }
+    
+    const remove = (req, res) => {
+        app.db('userschats')
+            .where({iduser: req.params.iduser})
+            .del()
+            .then(_ => res.send())
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, get, getByUser, remove }
 }

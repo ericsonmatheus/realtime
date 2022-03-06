@@ -1,8 +1,8 @@
-
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('messages', table => {
         table.increments('id').primary()
         table.string('body', 3000).notNull()
+        table.string('name').notNull()
         table.timestamp('dateHour').defaultTo(knex.fn.now())
         table.integer('iduser').references('id')
             .inTable('users').notNull()

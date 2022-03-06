@@ -26,6 +26,7 @@ module.exports = app => {
             if(!user.id) {
                 notExistsOrError(userFromDB, 'Login já cadastrado')
             }
+
         } catch(msg) {
             return res.status(400).send(msg)
         }        
@@ -42,7 +43,8 @@ module.exports = app => {
         } else {
             app.db('users')
                 .insert(user)
-                .then(_ => res.status(204).send())
+                .returning('*')
+                .then( user => res.status(204).send(user))
                 .catch(err => res.status(500).send(err))
         }
     }

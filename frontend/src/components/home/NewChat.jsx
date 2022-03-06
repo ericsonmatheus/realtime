@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NewChat.css";
 
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-function NewChat({user, chatlist, show, setShow}) {
+function NewChat({show, setShow, allUsers}) {
 
-    const [list, setList] = useState([
-        {id: 1, name: "Ericson Matheus"},
-        {id: 1, name: "Ericson Matheus"},
-        {id: 1, name: "Ericson Matheus"},
-        {id: 1, name: "Ericson Matheus"}
-    ])
+    
+    //Fechar janela de todos os contatos
     const handleClose = () => {
         setShow(false)
     }
@@ -24,7 +20,7 @@ function NewChat({user, chatlist, show, setShow}) {
                 <div className="newChat--headTitle">Nova Conversa</div>
             </div>
             <div className="newChat--list">
-                {list.map((item, key) => (
+                {allUsers.map((item, key) => (
                     <div className="newChat--item" key={key}>
                         <div className="newChat--itemname">{item.name}</div>
                     </div>

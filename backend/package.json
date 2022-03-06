@@ -12,17 +12,18 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.2",
-    "express": "^4.17.3",
-    "socket.io": "^4.4.1",
     "consign": "0.1.6",
     "cors": "2.8.4",
+    "express": "^4.17.3",
     "jwt-simple": "0.5.1",
     "knex": "0.15.2",
+    "koa": "^2.13.4",
     "moment": "2.22.2",
     "passport": "0.4.0",
     "passport-jwt": "4.0.0",
     "pg": "^8.0.3",
-    "pm2": "3.0.4"
+    "pm2": "3.0.4",
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

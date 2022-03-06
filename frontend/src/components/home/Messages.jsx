@@ -10,7 +10,7 @@ function Messages({ data, user }) {
             <div className="messageItem" style={{ backgroundColor: user.id === data.iduser ? '#DCF8C6' : '#FFF' }}>
                 <p className="messageText"><strong>{user.id === data.iduser ? '': data.name}</strong></p>
                 <p className="messageText">{data.body}</p>
-                <div className="messageDate">15:20</div>
+                <div className="messageDate">{data.time}</div>
             </div>
         </div>
     )

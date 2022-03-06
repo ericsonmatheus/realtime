@@ -48,21 +48,23 @@ function Chat({ chat }) {
         const result = await Api.getMessageByChat(chat.idchat)
         const messages = []
         Object.values(result.data).forEach((value) => {
+            const hour = value.dateHour.slice(11, 13)
+            const minute = value.dateHour.slice(14, 16)
+            const date = `${hour}:${minute}`
             let message = {
                 id: value.id,
                 body: value.body,
                 name: value.name,
                 iduser: value.iduser,
                 idchat: value.idchat,
-                dateHour: value.dateHour
+                time: date
             }
             messages.push(message)
         })
         setMessageList(messages)
-        console.log(result.data)
     }
     //Envia a mensagem para o chat
-    const handleSendClick = async() => {
+    const handleSendClick = async () => {
         if (text !== '') {
             const result = await Api.getUserByID(user.id)
             socket.emit('chat.message', {
@@ -72,6 +74,8 @@ function Chat({ chat }) {
                 idchat: chat.idchat
             })
             setText('');
+            
+        console.log(messageList)
         }
     }
 
@@ -94,7 +98,6 @@ function Chat({ chat }) {
 
     const handleExit = async () => {
         const result = await Api.deleteUserChats(user.id)
-        console.log(result)
         setIsEnter(false)
     }
 
@@ -104,7 +107,7 @@ function Chat({ chat }) {
             body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight
         }
 
-        const handleNewMessage = newMessage => {
+        const handleNewMessage = newMessage => {            
             setMessageList([...messageList, newMessage])
         }
         socket.on('chat.message', handleNewMessage)

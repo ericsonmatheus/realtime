@@ -31,3 +31,31 @@ Por fim poderá ser iniciado o projeto utilizando o script
 
 ## Scripts Disponíveis
 
+### `npm start`
+
+Para que seja inicializado o servidor onde está rodando a aplicação backend
+
+Abra [http://localhost:5050](http://localhost:5050)
+
+## Rotas disponíveis
+
+Para ter acessos a todas as rotas desta aplicação, será necessário que seja realizado cadastro, e posteriormente login, para que seja gerado Token de validação, Este poderá ser validado utilizando a rota para validar
+
+/singup
+/singin
+/validateToken
+Após realizado login, os usuários com acesso a esta aplicação poderão ter acesso as seguintes rotas
+
+/users
+Onde poderá ter acesso a todos os usuário, ou informar o id na URL e realizar alteração em algum usuário ou buscar algum usuário por ID
+
+/chats
+Poderá ter acesso aos chats cadastrados ou realizar o cadastro de chat novo 
+
+/userschats
+
+Neste momento, o usuário poderá ter acesso aos chats em que cada usuário está cadastrados, ou realizar um cadastro novo. 
+Sendo possível também buscar os chats em que o usuário estiver cadastrado, ou remover algum chat de algum usuário.
+
+/messages
+Esta poderá realizar a chamada de todas as mensagens para que usuário novos tenham acesso as todas as mensagem trocadas anteriormente

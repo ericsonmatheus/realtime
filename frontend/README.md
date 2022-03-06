@@ -8,67 +8,24 @@ Antes de executar este projeto, é necessário que seja executado o comando: **$
 
 ## Scripts Disponíveis 
 
-In the project directory, you can run:
+Neste projeto, você pode rodar o(s) script(s):
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para que seja inicializado o servidor onde está rodando a aplicação frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Abra [http://localhost:5000](http://localhost:5000) Para ter acesso
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Informações de Acesso
 
-### `npm run build`
+Deve-se primeiramente realizar um cadastro no sistema, através do endpoint [http://localhost:5000/register](http://localhost:5000/register)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Em seguida será necessário o login utilizando do **login** e **senha** criados anteriormente. 
+Observação: O Login e o nome cadastrados são informações diferentes no momento do acesso.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Informações de usabilidade
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Será disponilizado um chat geral onde todos os usuários cadastrados terão acesso e poderão se comunicar. 
+Para entrar no chat será necessário clicar na **chave** de acesso no canto superior direto. 
+Caso não tenha mais interesse em participar do chat, pode-se clicar na opção de **exit**

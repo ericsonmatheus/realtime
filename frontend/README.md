@@ -21,8 +21,7 @@ Abra [http://localhost:5000](http://localhost:5000) Para ter acesso
 
 Deve-se primeiramente realizar um cadastro no sistema, através do endpoint [http://localhost:5000/register](http://localhost:5000/register)
 
-Em seguida será necessário o login utilizando do **login** e **senha** criados anteriormente. 
-Observação: O Login e o nome cadastrados são informações diferentes no momento do acesso.
+Em seguida será necessário logar utilizando o **login** e **senha** criados anteriormente.
 
 ## Informações de usabilidade
 

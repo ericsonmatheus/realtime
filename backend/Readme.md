@@ -24,12 +24,27 @@ Será necessário adicionar ***--install_runtimes 0*** em um atalho criado para 
 
 ![corr](https://user-images.githubusercontent.com/45068732/156946870-f698196e-8277-4893-85e9-1e82d26a0f97.png)
 
+**4º Por fim deve ser feito a instalação do postgre com as configurações padrões sugeridas**
 
-Em seguida deverá ser criado uma base de dados com o nome **realtime**
+***Observação***: O postgree deverá ser adicionado como variável de ambiente
+
+**5º Acesse o terminal e logue no postgre com a senha criada no momento da instalação**
+
+![cmd](https://user-images.githubusercontent.com/45068732/156953613-afb95ff2-21d4-4e7c-a475-cffd52484781.png)
+
+**6º Em seguida crie uma base de dados com nome *realtime***
+
+![create](https://user-images.githubusercontent.com/45068732/156953770-368d4827-01e3-4943-803a-4341b221eb7c.png)
+
+**Antes de iniciar o projeto com o npm start, deve ser alterado o *password* no arquivo "knexfile.js" para a senha criada no momento da instalação do Postgree**
 
 Por fim poderá ser iniciado o projeto utilizando o script
 
 ## Scripts Disponíveis
+
+### `npm i`
+
+Obrigatório que seja utilizado este script para que sejam instalados todas as dependências necessárias para a execução deste software
 
 ### `npm start`
 
@@ -55,7 +70,6 @@ Onde poderá ter acesso a todos os usuário, ou informar o id na URL e realizar 
 Poderá ter acesso aos chats cadastrados ou realizar o cadastro de chat novo 
 
 # /userschats
-
 Neste momento, o usuário poderá ter acesso aos chats em que cada usuário está cadastrados, ou realizar um cadastro novo. 
 Sendo possível também buscar os chats em que o usuário estiver cadastrado, ou remover algum chat de algum usuário.
 

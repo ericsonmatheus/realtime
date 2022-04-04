@@ -9,7 +9,7 @@ export default {
                         .then(data => data)
                         .catch(err => console.log(err))
 
-        return result
+        return results
     },
     login:async (data) => {
         const url = `${baseApiUrl}/singin`
